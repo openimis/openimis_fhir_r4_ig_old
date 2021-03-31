@@ -1,0 +1,32 @@
+{
+    "resourceType": "ImplementationGuide",
+    "id": "fhir-ig-openimis",
+    "version": "0.0.1",
+    "url": "http://somewhere.org/myig/ImplementationGuide/fhir-ig-openimis",
+    "name": "OpenIMIS_IG",
+    "title": "openIMIS Implementation Guide",
+    "packageId": "fhir-ig-openimis",
+    "status": "draft",
+    "fhirVersion": [
+        "4.0.1"
+    ],
+    "definition": {
+        "resource": [],
+        "page": {
+            "nameUrl": "toc.html",
+            "title": "Table of Contents",
+            "generation": "html",
+            "page": []
+        },
+        "parameter": [
+            {
+                "code": "releaselabel",
+                "value": "CI Build"
+            },
+            {
+                "code": "copyrightyear",
+                "value": "2021+"
+            }
+        ]
+    }
+}
