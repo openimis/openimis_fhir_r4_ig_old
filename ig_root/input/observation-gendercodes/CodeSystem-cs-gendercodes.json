@@ -1,0 +1,27 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-gendercodes",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://somewhere.org/fhir/CodeSystem/cs-gendercodes",
+    "name": "VsGendercodes",
+    "title": "Gender CodeSystem",
+    "concept": [
+        {
+            "code": "M",
+            "display": "male",
+            "definition": "Male gender definition"
+        },
+        {
+            "code": "F",
+            "display": "female",
+            "definition": "Female gender definition"
+        },
+        {
+            "code": "O",
+            "display": "other",
+            "definition": "Other gender definition"
+        }
+    ]
+
+}
