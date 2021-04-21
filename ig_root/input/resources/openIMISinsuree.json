@@ -1,8 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://somewhere.org/fhir/StructureDefinition/Patient",
-  "name": "Patient",
+  "url": "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree",
+  "name": "openIMISinsuree",
   "description": "The openIMIS Insuree object mapped to the FHIR R4 Patient resource",
+  "title": "openIMISinsuree",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -35,7 +36,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DomainResource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -125,7 +126,7 @@
           ],
           "strength": "required",
           "description": "The gender of a person used for administrative purposes.",
-          "valueSet": "http://somewhere.org/fhir/ValueSet/vs-gendercodes"
+          "valueSet": "http://localhost:8080/fhir/ValueSet/vs-gendercodes"
         },
         "mapping": [
           {

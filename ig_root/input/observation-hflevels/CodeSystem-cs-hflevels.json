@@ -1,0 +1,24 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-hflevels",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-hflevels",
+    "name": "CsHflevels",
+    "title": "Health facility levels CodeSystem",
+    "concept": [
+        {
+            "code": "H",
+            "display": "hospital"
+        },
+        {
+            "code": "C",
+            "display": "hospital center"
+        },
+        {
+            "code": "D",
+            "display": "dispensary"
+        }
+    ]
+
+}

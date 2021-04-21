@@ -1,0 +1,15 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-hcsprograms",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/CodeSystem/vs-hcsprograms",
+    "name": "VsHcsprograms",
+    "title": "Healthcare service programs Valueset",
+    "compose": {
+        "include": [
+            {
+                "system": "http://localhost:8080/fhir/CodeSystem/cs-hcsprograms"
+            }
+        ]
+    }
+}

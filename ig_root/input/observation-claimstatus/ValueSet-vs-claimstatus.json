@@ -1,0 +1,13 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-claimstatus",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-claimstatus",
+    "title": "Claim status Codes ValueSet",
+    "name": "VsClaimstatus",
+    "compose": {
+        "include": [{
+            "system": "http://localhost:8080/fhir/CodeSystem/cs-claimstatus"
+        }]
+    }
+}

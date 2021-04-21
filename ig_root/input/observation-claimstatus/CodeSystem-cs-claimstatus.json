@@ -1,0 +1,68 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-claimstatus",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-claimstatus",
+    "name": "CsClaimstatus",
+    "title": "Claim status CodeSystem",
+    "property": [
+        {
+            "code": "tinyint",
+            "type": "integer"
+        }
+    ],
+    "concept": [
+        {
+            "code": "1",
+            "display": "Rejected",
+            "property": [
+                {
+                    "code": "tinyint",
+                    "valueInteger": 1
+                }
+            ]
+        },
+        {
+            "code": "2",
+            "display": "Entered",
+            "property": [
+                {
+                    "code": "tinyint",
+                    "valueInteger": 2
+                }
+            ]
+        },
+        {
+            "code": "4",
+            "display": "Checked",
+            "property": [
+                {
+                    "code": "tinyint",
+                    "valueInteger": 4
+                }
+            ]
+        },
+        {
+            "code": "8",
+            "display": "Processed",
+            "property": [
+                {
+                    "code": "tinyint",
+                    "valueInteger": 8
+                }
+            ]
+        },
+        {
+            "code": "16",
+            "display": "Valuated",
+            "property": [
+                {
+                    "code": "tinyint",
+                    "valueInteger": 16
+                }
+            ]
+        }
+    ]
+
+}

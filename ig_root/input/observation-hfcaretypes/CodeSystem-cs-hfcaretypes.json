@@ -1,0 +1,27 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-hfcaretypes",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-hfcaretypes",
+    "name": "CsHfcaretype",
+    "title": "Health facility care types CodeSystem",
+    "concept": [
+        {
+            "code": "I",
+            "display": "In-patient",
+            "definition": "In-patient care type"
+        },
+        {
+            "code": "O",
+            "display": "Out-patient",
+            "definition": "Out-patient care type"
+        },
+        {
+            "code": "B",
+            "display": "Both",
+            "definition": "Both in-/ and out-patient care types"
+        }
+    ]
+
+}

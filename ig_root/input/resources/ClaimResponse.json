@@ -1,0 +1,187 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/ReviewStatus",
+    "name": "ReviewStatus",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ClaimResponse",
+    "title": "Review Status - Profile",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "ClaimResponse",
+                "path": "ClaimResponse"
+            },
+            {
+                "id": "ClaimResponse.identifier",
+                "path": "ClaimResponse.identifier",
+                "base": {
+                    "path": "ClaimResponse.identifier",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "id": "ClaimResponse.status",
+                "path": "ClaimResponse.status",
+                "short": "1 | 2 | 4 | 8 | 16",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimresponsestatus"
+                },
+                "isSummary": true,
+                "isModifier": true
+            },
+            {
+                "id": "ClaimResponse.patient",
+                "path": "ClaimResponse.patient",
+                "short": "Insuree UUID"
+            },
+            {
+                "id": "ClaimResponse.created",
+                "path": "ClaimResponse.created",
+                "short": "Validity From",
+                "comment": "Last update datetime"
+            },
+            {
+                "id": "ClaimResponse.insurer",
+                "path": "ClaimResponse.insurer",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "ORGANISATION"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ClaimResponse.requestor",
+                "path": "ClaimResponse.requestor",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin",
+                            "http://localhost:8080/fhir/StructureDefinition/PractitionerRole",
+                            "ORGANISATION"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ClaimResponse.extension.outcome",
+                "path": "ClaimResponse.extension.outcome",
+                "short": "Claim status",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                }
+            },
+            {
+                "id": "Claimresponse.extension.adjustmentReason",
+                "path": "Claimresponse.extension.adjustmentReason",
+                "short": "Claim Adjustment",
+                "base": {
+                    "path": "Claimresponse.extension.adjustmentReason",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Claimresponse.extension.total.amount",
+                "path": "Claimresponse.extension.total.amount",
+                "base": {
+                    "path": "Claimresponse.extension.total.amount",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "Money"
+                    }
+                ]
+            },
+            {
+                "id": "Claimresponse.extension.total.category",
+                "path": "Claimresponse.extension.total.category",
+                "base": {
+                    "path": "Claimresponse.extension.total.category",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                }
+            },
+            {
+                "id": "ClaimResponse.communicationRequest",
+                "path": "ClaimResponse.communicationRequest",
+                "comment": "reference to CommunicationRequest resource Provided only if the User has Claims.Feedback authority (111009)",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "--COMMUNICATION REQUEST--"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ClaimResponse.error",
+                "path": "ClaimResponse.error",
+                "base": {
+                    "path": "ClaimResponse.error",
+                    "min": 0,
+                    "max": "*"
+                },
+                "short": "Rejection Reason",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "valueSet": "http://localhost:8080/fhir/CodeSystem/vs-rejectionreason"
+                }
+            },
+            {
+                "id": "Claimresponse.item.adjudication.category",
+                "path": "Claimresponse.item.adjudication.category",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                }
+            }
+        ]
+    }
+}

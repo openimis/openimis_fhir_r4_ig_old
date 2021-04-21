@@ -1,0 +1,95 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "cs-rejectionreason",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-rejectionreason",
+    "name": "CsRejectionreason",
+    "title": "Rejection reason CodeSystem",
+    "concept": [
+        {
+            "code": "-1",
+            "display": "Rejected by a medical officer"
+        },
+        {
+            "code": "0",
+            "display": "Accepted"
+        },
+        {
+            "code": "1",
+            "display": "Item/Service not in the registers of medical items/services"
+        },
+        {
+            "code": "2",
+            "display": "Item/Service not in the pricelists associated with the health facility"
+        },
+        {
+            "code": "3",
+            "display": "Item/Service is not covered by an active policy of the patient "
+        },
+        {
+            "code": "4",
+            "display": "Item/Service doesn’t comply with limitations on patients (men/women, adults/children)"
+        },
+        {
+            "code": "5",
+            "display": "Item/Service doesn’t comply with frequency constraint "
+        },
+        {
+            "code": "6",
+            "display": "Item/Service duplicated "
+        },
+        {
+            "code": "7",
+            "display": "Not valid insurance number"
+        },
+        {
+            "code": "8",
+            "display": "Diagnosis code not in the current list of diagnoses"
+        },
+        {
+            "code": "9",
+            "display": "Target date of provision of health care invalid"
+        },
+        {
+            "code": "10",
+            "display": "Item/Service doesn’t comply with type of care constraint"
+        },
+        {
+            "code": "11",
+            "display": "Maximum number of in-patient admissions exceeded"
+        },
+        {
+            "code": "12",
+            "display": "Maximum number of out-patient visits exceeded"
+        },
+        {
+            "code": "13",
+            "display": "Maximum number of consultations exceeded"
+        },
+        {
+            "code": "14",
+            "display": "Maximum number of surgeries exceeded"
+        },
+        {
+            "code": "15",
+            "display": "Maximum number of deliveries exceeded"
+        },
+        {
+            "code": "16",
+            "display": "Maximum number of provisions of item/service exceeded"
+        },
+        {
+            "code": "17",
+            "display": "Item/service cannot be covered within waiting period"
+        },
+        {
+            "code": "18",
+            "display": "N/A"
+        },
+        {
+            "code": "19",
+            "display": "Maximum number of antenatal contacts exceeded"
+        }
+    ]
+}

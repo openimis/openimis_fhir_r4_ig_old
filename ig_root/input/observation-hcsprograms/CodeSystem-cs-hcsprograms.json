@@ -1,0 +1,29 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-hcsprograms",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-hcsprograms",
+    "name": "CsHcsprograms",
+    "title": "Health care service programs CodeSystem",
+    "concept": [
+        {
+            "code": "G",
+            "display": "Government",
+            "definition": "Program from a government entity"
+        },
+        {
+            "code": "C",
+            "display": "Charity"
+        },
+        {
+            "code": "D",
+            "display": "District organization"
+        },
+        {
+            "code": "P",
+            "display": "Private organization"
+        }
+    ]
+
+}

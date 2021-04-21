@@ -1,0 +1,106 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/HealthcareService",
+    "name": "HealthcareService",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "HealthcareService",
+    "title": "HealthcareService - Profile",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "HealthcareService.identifier",
+                "path": "HealthcareService.identifier",
+                "definition": "Identifier of the Activity Definition"
+            },
+            {
+                "id": "HealthcareService.name",
+                "path": "HealthcareService.name"
+            },
+            {
+                "id": "HealthcareService.category",
+                "path": "HealthcareService.category",
+                "base": {
+                    "path": "HealthcareService.category",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-hflevels"
+                }
+            },
+            {
+                "id": "HealthcareService.type",
+                "path": "HealthcareService.type",
+                "base": {
+                    "path": "HealthcareService.type",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-hfcaretypes"
+                }
+            },
+            {
+                "id": "HealthcareService.specialty",
+                "path": "HealthcareService.scpecialty",
+                "base": {
+                    "path": "HealthcareService.specialty",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "HealthcareService.location",
+                "path": "HealthcareService.location"
+            },
+            {
+                "id": "HealthcareService.extraDetails",
+                "path": "HealthcareService.extraDetails"
+            },
+            {
+                "id": "HealthcareService.telecom",
+                "path": "HealthcareService.telecom",
+                "definition": "Contains values that are being mapped for Phone, Fax and Email"
+            },
+            {
+                "id": "HealthcareService.program",
+                "path": "HealthcareService.program",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/CodeSystem/vs-hcsprograms"
+                }
+            },
+            {
+                "id": "HealthcareService.coverageArea",
+                "path": "HealthcareService.coverageArea"
+            }
+        ]
+    }
+}

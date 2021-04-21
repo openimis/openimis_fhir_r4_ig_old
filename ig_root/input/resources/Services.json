@@ -1,0 +1,95 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/Services",
+    "name": "Services",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ActivityDefinition",
+    "title": "Services",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "ActivityDefinition",
+                "path": "ActivityDefinition"
+            },
+            {
+                "id": "ActivityDefinition.identifier",
+                "path": "ActivityDefinition.identifier",
+                "definition": "Identifier of the Activity Definition"
+            },
+            {
+                "id": "ActivityDefinition.status",
+                "path": "ActivityDefinition.status"
+            },
+            {
+                "id": "ActivityDefinition.date",
+                "path": "ActivityDefinition.date"
+            },
+            {
+                "id": "ActivityDefinition.name",
+                "path": "ActivityDefinition.name"
+            },
+            {
+                "id": "ActivityDefinition.title",
+                "path": "ActivityDefinition.title",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "ActivityDefinition.useContext.code",
+                "path": "ActivityDefinition.useContext.code",
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-usage-context-type"
+                }
+            },
+            {
+                "id": "ActivityDefinition.topic",
+                "path": "ActivityDefinition.topic"
+            },
+            {
+                "id": "ActivityDefinition.code",
+                "path": "AcitivityDefinition.code"
+            },
+            {
+                "id": "ActivityDefinition.extension.frequency",
+                "path": "ActivityDefinition.extension.frequency",
+                "base": {
+                    "path": "ActivityDefinition.extension.frequency",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ]
+                
+            },
+            {
+                "id": "ActivityDefinition.extension.unitPrice",
+                "path": "ActivityDefinition.extension.unitPrice",
+                "base": {
+                    "path": "ActivityDefinition.extension.unitPrice",
+                    "min": 1,
+                    "max": "1"
+                },
+                "type": [{
+                    "code": "Money"
+                }]
+            }
+        ]
+    }
+}

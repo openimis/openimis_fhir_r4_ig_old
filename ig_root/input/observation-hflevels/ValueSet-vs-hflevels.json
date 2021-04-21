@@ -1,0 +1,13 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-hflevels",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-hflevels",
+    "title": "Health facility levels ValueSet",
+    "name": "VsHflevels",
+    "compose": {
+        "include": [{
+            "system": "http://localhost:8080/fhir/CodeSystem/cs-hflevels"
+        }]
+    }
+}

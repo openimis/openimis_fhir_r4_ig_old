@@ -1,0 +1,13 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-hfcaretypes",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-hfcaretypes",
+    "title": "Health facility care types ValueSet",
+    "name": "VsHfcaretypes",
+    "compose": {
+        "include": [{
+            "system": "http://localhost:8080/fhir/CodeSystem/cs-hfcaretypes"
+        }]
+    }
+}

@@ -2,12 +2,12 @@
     "resourceType":"ValueSet",
     "id":"vs-gendercodes",
     "status": "draft",
-    "url": "http://somewhere.org/fhir/ValueSet/vs-gendercodes",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-gendercodes",
     "title": "Gender Codes ValueSet",
     "name": "VsGendercodes",
     "compose": {
         "include": [{
-            "system": "http://somewhere.org/fhir/CodeSystem/cs-gendercodes"
+            "system": "http://localhost:8080/fhir/CodeSystem/cs-gendercodes"
         }]
     }
 }

@@ -1,0 +1,32 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-claimresponsestatus",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-claimresponsestatus",
+    "name": "CsClaimresponsestatus",
+    "title": "Claim response status CodeSystem",
+    "concept": [
+        {
+            "code": "1",
+            "display": "Idle"
+        },
+        {
+            "code": "2",
+            "display": "Not Selected"
+        },
+        {
+            "code": "4",
+            "display": "Selected for Review"
+        },
+        {
+            "code": "8",
+            "display": "Reviewed"
+        },
+        {
+            "code": "16",
+            "display": "ByPassed"
+        }
+    ]
+
+}

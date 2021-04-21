@@ -3,8 +3,8 @@
     "id": "cs-gendercodes",
     "status": "draft",
     "content": "complete",
-    "url": "http://somewhere.org/fhir/CodeSystem/cs-gendercodes",
-    "name": "VsGendercodes",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-gendercodes",
+    "name": "CsGendercodes",
     "title": "Gender CodeSystem",
     "concept": [
         {

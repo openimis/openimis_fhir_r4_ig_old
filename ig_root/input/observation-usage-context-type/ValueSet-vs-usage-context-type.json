@@ -1,0 +1,27 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-usage-context-type",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-usage-context-type",
+    "title": "Usage Context Type ValueSet",
+    "name": "VsUsageContextType",
+    "compose": {
+        "include": [{
+            "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+            "concept": [
+                {
+                    "code": "gender"
+                },
+                {
+                    "code": "age"
+                },
+                {
+                    "code": "workflow"
+                },
+                {
+                    "code": "venue"
+                }
+            ]
+        }]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "resourceType":"StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin",
+    "name": "Claim Admin",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Practitioner",
+    "title": "Claim Admin",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+              "id": "Practitioner.identifier",
+              "path": "Practitioner.identifier",
+              "comment": "Identifier field contains values that are being mapped for both claimAdminUUID and claimAdminCode fields"
+            },
+            {
+              "id": "Practitioner.name",
+              "path": "Practitioner.name",
+              "definition": "Contains value that are being mapped for both LastNam and OtherNames fields"
+            },
+            {
+              "id": "Practitioner.birthDate",
+              "path": "Practitioner.birthDate",
+              "type": [
+                {
+                  "code": "date"
+                }
+              ],
+              "constraint": [
+                {
+                  "key": "ele-1",
+                  "severity": "error",
+                  "human": "All FHIR elements must have a @value or children",
+                  "expression": "hasValue() or (children().count() \u003e id.count())",
+                  "xpath": "@value|f:*|h:div",
+                  "source": "http://hl7.org/fhir/StructureDefinition/Element"
+                }
+              ]
+            },
+            {
+              "id": "Practitioner.telecom",
+              "path": "Practitioner.telecom",
+              "definition": "Contains values that are being mapped for both Phone and Email fields"
+            }
+        ]
+    }
+}

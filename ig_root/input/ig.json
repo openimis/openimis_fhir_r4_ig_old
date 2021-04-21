@@ -2,16 +2,62 @@
     "resourceType": "ImplementationGuide",
     "id": "fhir-ig-openimis",
     "version": "0.0.1",
-    "url": "http://somewhere.org/myig/ImplementationGuide/fhir-ig-openimis",
-    "name": "OpenIMIS_IG",
+    "url": "http://localhost:8080/fhir/ImplementationGuide/fhir-ig-openimis",
+    "name": "openIMIS_IG",
     "title": "openIMIS Implementation Guide",
-    "packageId": "fhir-ig-openimis",
+    "packageId": "swissTPH.fhir.openimis",
     "status": "draft",
     "fhirVersion": [
         "4.0.1"
     ],
     "definition": {
-        "resource": [],
+        "resource": [
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-gendercodes"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-gendercodes"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-claimstatus"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-claimstatus"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-usage-context-type"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-hfcaretypes"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-hfcaretypes"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-hflevels"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-hflevels"
+                }
+            }
+        ],
         "page": {
             "nameUrl": "toc.html",
             "title": "Table of Contents",
@@ -24,8 +70,36 @@
                 "value": "CI Build"
             },
             {
+                "code": "logging",
+                "value": "init"
+            },
+            {
                 "code": "copyrightyear",
                 "value": "2021+"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-gendercodes"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-claimstatus"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-usage-context-type"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-hfcaretypes"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-hflevels"
+            },
+            {
+                "code": "autoload-resources",
+                "value": "true"
             }
         ]
     }
