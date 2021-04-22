@@ -13,10 +13,9 @@ def structureDefinition(url):
     data = {}
     print("####Building the structureDefinition template####\n")
     data['resourceType'] = 'StructureDefinition'
-    url = input('Specify the URL of the resource\n')
-    data['url'] = url
     name = input('Specify the name (machine-readable) of the resource\n')
     data['name'] = name
+    data['url'] = url + '/StructureDefinition/'+name
     title = input('Specify the title (user-friendly) of the resource\n')
     data['title'] = title
     status = input(
@@ -40,7 +39,7 @@ def structureDefinition(url):
         'Definition that this type is constrained/specialized from. Absolute URL has to be provided. (Optional)\n')
     data['type'] = baseDefinition
     derivation = input(
-        'How the type relates to the base definition\n specialization | constraint (Optional)\n')
+        'How the type relates to the base definition specialization | constraint (Optional)\n')
     if derivation:
         data['derivation'] = derivation
     snapshot = input("Type anything to include a snapshot view\n")
@@ -61,7 +60,7 @@ def structureDefinition(url):
                     "Why this resource has been created (Optional)\n")
                 min = int(input("Minimum Cardinality as an integer\n"))
                 max = input("Maximum Cardinality, can be a number or *\n")
-                base = input("Base - Information about the base definition of the element provided to make it unnecessary for tools to trace the deviation of the element through the derived and related profiles (Optional)")
+                base = input("Base - Information about the base definition of the element provided to make it unnecessary for tools to trace the deviation of the element through the derived and related profiles, press anything to specify it (Optional)")
                 if base:
                     base = {}
                     path = input("Path of the base element")
@@ -72,7 +71,7 @@ def structureDefinition(url):
                     base["min"] = min
                     base["max"] = max
                 el_type = input(
-                    "Data type and Profile for this element (Optional)")
+                    "Data type and Profile for this element, press any key to define it (Optional)")
                 if el_type:
                     el_type = []
                     el_type_1 = {}
@@ -81,7 +80,7 @@ def structureDefinition(url):
                     profile = input(
                         "Profiles (StructureDefinition or IG, optional)")
                     targetProfile = input(
-                        "Profile (StructureDefinition or IG) on  the Reference/canonical target, optional")
+                        "(Target) Profile (StructureDefinition or IG) on  the Reference/canonical target, optional")
                     el_type_1["code"] = code
                     if profile:
                         el_type_1["profile"] = profile
@@ -97,7 +96,7 @@ def structureDefinition(url):
                 isSummary = input(
                     "Whether the element should be included if a client requests a search with the parameter _summary = true")
                 binding = input(
-                    "ValueSet details if this is coded (what Valueset to bind it to)")
+                    "ValueSet details if this is coded (what Valueset to bind it to), press any key to specify (Optional)")
                 if binding:
                     binding = {}
                     strength = input(
@@ -131,13 +130,13 @@ def structureDefinition(url):
                 if el_type:
                     element["type"] = el_type
                 if mustSupport:
-                    element["mustSupport"] = mustSupport
+                    element["mustSupport"] = sorted(mustSupport.lower()) == "true" or "yes"
                 if isModifier:
-                    element["isModifier"] = isModifier
+                    element["isModifier"] = sorted(isModifier.lower()) == "true" or "yes"
                 if isModifierReason:
                     element["isModifierReason"] = isModifierReason
                 if isSummary:
-                    element["isSummary"] = isSummary
+                    element["isSummary"] = sorted(isSummary.lower()) == "true" or "yes"
                 if binding:
                     element["binding"] = binding
             except KeyboardInterrupt:
@@ -147,6 +146,7 @@ def structureDefinition(url):
         element = []
         while True:
             try:
+                element_dict = {}
                 path = input("Path to the element\n")
                 sliceName = input(
                     "If using slice, specify slicename if wished (Optional)\n")
@@ -209,42 +209,46 @@ def structureDefinition(url):
                         binding["description"] = description
                     if valueset:
                         binding["valueSet"] = valueset
-                element["path"] = path
+                element_dict["path"] = path
                 if sliceName:
-                    element["sliceName"] = sliceName
+                    element_dict["sliceName"] = sliceName
                 if short:
-                    element["short"] = short
+                    element_dict["short"] = short
                 if definition:
-                    element["definition"] = definition
+                    element_dict["definition"] = definition
                 if comment:
-                    element["comment"] = comment
+                    element_dict["comment"] = comment
                 if requirements:
-                    element["requirements"] = requirements
+                    element_dict["requirements"] = requirements
                 if min:
-                    element["min"] = min
+                    element_dict["min"] = min
                 if max:
-                    element["max"] = max
+                    element_dict["max"] = max
                 if base:
-                    element["base"] = base
+                    element_dict["base"] = base
                 if el_type:
-                    element["type"] = el_type
+                    element_dict["type"] = el_type
                 if mustSupport:
-                    element["mustSupport"] = mustSupport
+                    element_dict["mustSupport"] = mustSupport
                 if isModifier:
-                    element["isModifier"] = isModifier
+                    element_dict["isModifier"] = isModifier
                 if isModifierReason:
-                    element["isModifierReason"] = isModifierReason
+                    element_dict["isModifierReason"] = isModifierReason
                 if isSummary:
-                    element["isSummary"] = isSummary
+                    element_dict["isSummary"] = isSummary
                 if binding:
-                    element["binding"] = binding
+                    element_dict["binding"] = binding
+                element.append(element_dict)
             except KeyboardInterrupt:
                 break
-
         data["differential"] = element
 
     path = input(
         'Specify the path with file name, this object should be saved in relative to this file\n')
+    path_directory_list = path.split('/')[:-1]
+    path_directory = os.path.join(*path_directory_list)
+    if not os.path.exists(path_directory):
+        os.mkdir(path_directory)
     with open(path, 'w') as outfile:
         json.dump(data, outfile)
 
