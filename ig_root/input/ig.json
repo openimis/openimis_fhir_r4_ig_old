@@ -56,6 +56,36 @@
                 "reference": {
                     "reference": "ValueSet/vs-hflevels"
                 }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-hcsprograms"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-hcsprograms"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-rejectionreason"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-rejectionreason"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-policystatus"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-policystatus"
+                }
             }
         ],
         "page": {
@@ -96,6 +126,18 @@
             {
                 "code": "path-resource",
                 "value": "input/observation-hflevels"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/error-rejectionreason"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-hcsprograms"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-policystatus"
             },
             {
                 "code": "autoload-resources",

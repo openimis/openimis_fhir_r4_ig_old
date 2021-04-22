@@ -153,10 +153,10 @@
                 ]
             },
             {
-                "id": "ClaimResponse.error",
-                "path": "ClaimResponse.error",
+                "id": "ClaimResponse.error.code",
+                "path": "ClaimResponse.error.code",
                 "base": {
-                    "path": "ClaimResponse.error",
+                    "path": "ClaimResponse.error.code",
                     "min": 0,
                     "max": "*"
                 },
@@ -181,6 +181,65 @@
                 "binding": {
                     "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
                 }
+            },
+            {
+                "id": "Claimresponse.item.adjudication.reason",
+                "path": "Claimresponse.item.adjudication.reason",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Claimresponse.item.adjudication.value",
+                "path": "Claimresponse.item.adjudication.value"
+            },
+            {
+                "id": "Claimresponse.item.adjudication.amount",
+                "path": "Claimresponse.item.adjudication.amount",
+                "comment": "Monetary amount is taken from the limitation value by default. The openIMIS field considered here depends on the status of the claims"
+            },
+            {
+                "id": "Claimresponse.processNote.text",
+                "path": "Claimresponse.processNote.text",
+                "comment": "claimResponse.item.noteNumber can be used to join information about the mapped field and claim item"
+            },
+            {
+                "id": "Claimresponse.disposition",
+                "path": "Claimresponse.disposition",
+                "comment": "not mapped yet"
+            },
+            {
+                "id": "Claimresponse.request",
+                "path": "Claimresponse.request"
+            },
+            {
+                "id": "Claimresponse.extension.valuePeriod.billablePeriod",
+                "path": "Claimresponse.extension.valuePeriod.billablePeriod",
+                "comment": "DateFrom and DateTo are mapped to a period of time between them",
+                "base": {
+                    "path": "Claimresponse.extension.valuePeriod.billablePeriod",
+                    "min": 1,
+                    "max": "1"
+                }
+            },
+            {
+                "id": "Claimresponse.extension.valueReference.diagnosis",
+                "path": "Claimresponse.extension.valueReference.diagnosis",
+                "base": {
+                    "path": "Claimresponse.extension.valueReference.diagnosis",
+                    "min": 1,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/Condition"
+                        ]
+                    }
+                ]
             }
         ]
     }

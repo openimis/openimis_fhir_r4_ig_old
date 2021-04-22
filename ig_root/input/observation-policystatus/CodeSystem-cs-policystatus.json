@@ -1,0 +1,27 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "cs-policystatus",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-policystatus",
+    "name": "CsPolicystatus",
+    "title": "Policy status CodeSystem",
+    "concept": [
+        {
+            "code": "1",
+            "display": "Idle"
+        },
+        {
+            "code": "2",
+            "display": "Active"
+        },
+        {
+            "code": "4",
+            "display": "Suspended"
+        },
+        {
+            "code": "8",
+            "display": "Expired"
+        }
+    ]
+}
