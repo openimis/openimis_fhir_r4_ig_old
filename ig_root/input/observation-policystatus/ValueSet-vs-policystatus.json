@@ -2,13 +2,13 @@
     "resourceType": "ValueSet",
     "id": "vs-policystatus",
     "status": "draft",
-    "url": "http://localhost:8080/fhirValueSetvs-policystatus",
+    "url": "http://localhost:8080/fhirValueSet/vs-policystatus",
     "name": "VsPolicystatus",
     "title": "Policystatus ValueSet",
     "compose": {
         "include": [
             {
-                "system": "http://localhost:8080/fhir/ValueSet/vs-policystatus"
+                "system": "http://localhost:8080/fhir/ValueSet/cs-policystatus"
             }
         ]
     }

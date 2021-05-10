@@ -1,0 +1,98 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole",
+    "name": "ClaimAdminRole",
+    "status": "draft",
+    "title": "Claim Admin Role",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "PractitionerRole",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "PractitionerRole.practitioner",
+                "path": "PractitionerRole.practitioner",
+                "comment": "Example of reference (where '{ClaimAdminCode}' is the Claim Admin code): 'Practitioner/{ClaimAdminCode}'",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "PractitionerRole.active",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.period",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.organization",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.code",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.specialty",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.location",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "PractitionerRole.healthcareService",
+                "path": "PractitionerRole.healthcareService",
+                "comment": "example of reference (where '{HFCode}' is the health facility code): 'HealthcareService/{HFUUID}'",
+                "type":[
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/HealthcareService"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "PractitionerRole.telecom",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.availableTime",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.notAvailable",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.availabilityExceptions",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "PractitionerRole.endpoint",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

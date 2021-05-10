@@ -1,0 +1,15 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-claimresponse-type",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-claimresponse-type",
+    "name": "VsClaimresponseType",
+    "title": "Claim response type ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://localhost:8080/fhir/CodeSystem/cs-claimresponse-type"
+            }
+        ]
+    }
+}

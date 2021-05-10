@@ -7,28 +7,14 @@
     "kind": "resource",
     "abstract": false,
     "type": "HealthcareService",
-    "title": "HealthcareService - Profile",
+    "title": "Healthcare Service",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
-                "id": "HealthcareService.identifier",
-                "path": "HealthcareService.identifier",
-                "definition": "Identifier of the Activity Definition"
-            },
-            {
-                "id": "HealthcareService.name",
-                "path": "HealthcareService.name"
-            },
-            {
                 "id": "HealthcareService.category",
                 "path": "HealthcareService.category",
-                "base": {
-                    "path": "HealthcareService.category",
-                    "min": 0,
-                    "max": "1"
-                },
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -40,13 +26,7 @@
                 }
             },
             {
-                "id": "HealthcareService.type",
                 "path": "HealthcareService.type",
-                "base": {
-                    "path": "HealthcareService.type",
-                    "min": 0,
-                    "max": "1"
-                },
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -60,32 +40,36 @@
             {
                 "id": "HealthcareService.specialty",
                 "path": "HealthcareService.scpecialty",
-                "base": {
-                    "path": "HealthcareService.specialty",
-                    "min": 0,
-                    "max": "1"
-                },
                 "type": [
                     {
                         "code": "CodeableConcept"
                     }
+                ],
+                "binding": {
+                    "valueSet":"Create tblHF.HFSublevel codesystem"
+                }
+            },
+            {
+                "path": "HealthcareService.location",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/Location"
+                        ]
+                    }
                 ]
             },
             {
-                "id": "HealthcareService.location",
-                "path": "HealthcareService.location"
-            },
-            {
                 "id": "HealthcareService.extraDetails",
-                "path": "HealthcareService.extraDetails"
+                "path": "HealthcareService.extraDetails",
+                "comment": "HF Address"
             },
             {
-                "id": "HealthcareService.telecom",
                 "path": "HealthcareService.telecom",
                 "definition": "Contains values that are being mapped for Phone, Fax and Email"
             },
             {
-                "id": "HealthcareService.program",
                 "path": "HealthcareService.program",
                 "type": [
                     {
@@ -99,7 +83,85 @@
             },
             {
                 "id": "HealthcareService.coverageArea",
-                "path": "HealthcareService.coverageArea"
+                "path": "HealthcareService.coverageArea",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/Location"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path":"HealthcareService.photo",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.active",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.providedBy",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.comment",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.serviceProvisionCode",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.eligibility",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.characteristic",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.communication",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.referralMethod",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.availableTime",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.appointmentRequired",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.notAvailable",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.availabilityExceptions",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"HealthcareService.endpoint",
+                "min":0,
+                "max":"0"
             }
         ]
     }

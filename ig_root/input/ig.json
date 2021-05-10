@@ -14,6 +14,16 @@
         "resource": [
             {
                 "reference": {
+                    "reference": "CodeSystem/cs-claimresponse-type"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-claimresponse-type"
+                }
+            },
+            {
+                "reference": {
                     "reference": "CodeSystem/cs-gendercodes"
                 }
             },
@@ -106,6 +116,10 @@
             {
                 "code": "copyrightyear",
                 "value": "2021+"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-claimresponse-type"
             },
             {
                 "code": "path-resource",

@@ -1,0 +1,15 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-location",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-location",
+    "name": "VsLocation",
+    "title": "Location ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://localhost:8080/fhir/CodeSystem/cs-location"
+            }
+        ]
+    }
+}

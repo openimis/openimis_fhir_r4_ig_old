@@ -1,0 +1,99 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/Diagnosis",
+    "name": "Diagnosis",
+    "status": "draft",
+    "title": "Diagnosis",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Condition",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Condition.recordedDate:ValidityFrom",
+                "path": "Condition.recordedDate",
+                "sliceName": "ValidityFrom"
+            },
+            {
+                "path": "Condition.subject",
+                "definition": "Reference to Patient resource",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "Condition.clinicalStatus",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.verificationStatus",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.category",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.severity",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"Condition.bodySite",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.encounter",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.onset",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.abatement",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"Condition.asserter",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.recorder",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.stage",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.evidence",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Condition.note",
+                "min":0,
+                "max":"0"
+            }
+        ]
+    }
+}

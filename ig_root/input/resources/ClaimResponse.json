@@ -1,28 +1,33 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/ReviewStatus",
-    "name": "ReviewStatus",
+    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimResponse",
+    "name": "ClaimResponse",
     "status": "draft",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "ClaimResponse",
-    "title": "Review Status - Profile",
+    "title": "Claim Response",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
-                "id": "ClaimResponse",
-                "path": "ClaimResponse"
+                "path": "ClaimResponse.identifier",
+                "min":0,
+                "max":"1"
             },
             {
-                "id": "ClaimResponse.identifier",
-                "path": "ClaimResponse.identifier",
-                "base": {
-                    "path": "ClaimResponse.identifier",
-                    "min": 0,
-                    "max": "1"
+                "id": "Claimresponse.type",
+                "path": "Claimresponse.type",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimresponse-type"
                 }
             },
             {
@@ -44,16 +49,17 @@
             {
                 "id": "ClaimResponse.patient",
                 "path": "ClaimResponse.patient",
-                "short": "Insuree UUID"
+                "short": "Insuree UUID",
+                "type": [
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
             },
             {
-                "id": "ClaimResponse.created",
-                "path": "ClaimResponse.created",
-                "short": "Validity From",
-                "comment": "Last update datetime"
-            },
-            {
-                "id": "ClaimResponse.insurer",
                 "path": "ClaimResponse.insurer",
                 "type": [
                     {
@@ -65,14 +71,13 @@
                 ]
             },
             {
-                "id": "ClaimResponse.requestor",
                 "path": "ClaimResponse.requestor",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
                             "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin",
-                            "http://localhost:8080/fhir/StructureDefinition/PractitionerRole",
+                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole",
                             "ORGANISATION"
                         ]
                     }
@@ -108,13 +113,7 @@
                 ]
             },
             {
-                "id": "Claimresponse.extension.total.amount",
-                "path": "Claimresponse.extension.total.amount",
-                "base": {
-                    "path": "Claimresponse.extension.total.amount",
-                    "min": 0,
-                    "max": "1"
-                },
+                "path": "Claimresponse.total.amount",
                 "type": [
                     {
                         "code": "Money"
@@ -122,13 +121,7 @@
                 ]
             },
             {
-                "id": "Claimresponse.extension.total.category",
-                "path": "Claimresponse.extension.total.category",
-                "base": {
-                    "path": "Claimresponse.extension.total.category",
-                    "min": 0,
-                    "max": "1"
-                },
+                "path": "Claimresponse.total.category",
                 "type": [
                     {
                         "code": "code"
@@ -140,7 +133,6 @@
                 }
             },
             {
-                "id": "ClaimResponse.communicationRequest",
                 "path": "ClaimResponse.communicationRequest",
                 "comment": "reference to CommunicationRequest resource Provided only if the User has Claims.Feedback authority (111009)",
                 "type": [
@@ -153,13 +145,7 @@
                 ]
             },
             {
-                "id": "ClaimResponse.error.code",
                 "path": "ClaimResponse.error.code",
-                "base": {
-                    "path": "ClaimResponse.error.code",
-                    "min": 0,
-                    "max": "*"
-                },
                 "short": "Rejection Reason",
                 "type": [
                     {
@@ -171,7 +157,6 @@
                 }
             },
             {
-                "id": "Claimresponse.item.adjudication.category",
                 "path": "Claimresponse.item.adjudication.category",
                 "type": [
                     {
@@ -192,27 +177,20 @@
                 ]
             },
             {
-                "id": "Claimresponse.item.adjudication.value",
-                "path": "Claimresponse.item.adjudication.value"
-            },
-            {
-                "id": "Claimresponse.item.adjudication.amount",
-                "path": "Claimresponse.item.adjudication.amount",
-                "comment": "Monetary amount is taken from the limitation value by default. The openIMIS field considered here depends on the status of the claims"
-            },
-            {
-                "id": "Claimresponse.processNote.text",
-                "path": "Claimresponse.processNote.text",
-                "comment": "claimResponse.item.noteNumber can be used to join information about the mapped field and claim item"
-            },
-            {
-                "id": "Claimresponse.disposition",
                 "path": "Claimresponse.disposition",
                 "comment": "not mapped yet"
             },
             {
                 "id": "Claimresponse.request",
-                "path": "Claimresponse.request"
+                "path": "Claimresponse.request",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/Claim"
+                        ]
+                    }
+                ]
             },
             {
                 "id": "Claimresponse.extension.valuePeriod.billablePeriod",
@@ -236,7 +214,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Condition"
+                            "http://localhost:8080/fhir/StructureDefinition/Diagnosis"
                         ]
                     }
                 ]

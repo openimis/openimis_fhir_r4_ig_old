@@ -1,0 +1,27 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "cs-location",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-location",
+    "name": "CsLocation",
+    "title": "Location CodeSystem",
+    "concept": [
+        {
+            "code": "R",
+            "display": "Region"
+        },
+        {
+            "code": "D",
+            "display": "District"
+        },
+        {
+            "code": "W",
+            "display": "Municipality"
+        },
+        {
+            "code": "V",
+            "display": "Village"
+        }
+    ]
+}

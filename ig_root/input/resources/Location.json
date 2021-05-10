@@ -1,0 +1,104 @@
+{
+    "resourceType": "StructureDefinition",
+    "name": "Location",
+    "url": "http://localhost:8080/fhir/StructureDefinition/Location",
+    "title": "Location",
+    "fhirVersion": "4.0.1",
+    "status": "draft",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Location",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+        {
+            "path": "Location.physicalType",
+            "type": [
+                {
+                    "code": "CodeableConcept"
+                }
+            ],
+            "binding": {
+                "valueSet": "http://localhost:8080/fhir/ValueSet/vs-location"
+            }
+        },
+        {
+            "path": "Location.partOf",
+            "type":[
+                {
+                    "code":"Reference",
+                    "targetProfile":[
+                        "http://localhost:8080/fhir/StructureDefinition/Location"
+                    ]
+                }
+            ]
+        },
+        {
+            "path":"Location.status",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.operationalStatus",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.alias",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.description",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.mode",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.type",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.telecom",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.address",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.position",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.managingOrganization",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.hoursOfOperation",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.availabilityExceptions",
+            "min":0,
+            "max":"0"
+        },
+        {
+            "path":"Location.endpoint",
+            "min":0,
+            "max":"0"
+        }
+    ]
+    }
+}

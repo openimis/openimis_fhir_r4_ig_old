@@ -13,10 +13,6 @@
     "differential": {
         "element": [
             {
-                "id": "ActivityDefinition",
-                "path": "ActivityDefinition"
-            },
-            {
                 "id": "ActivityDefinition.identifier",
                 "path": "ActivityDefinition.identifier",
                 "definition": "Identifier of the Activity Definition"

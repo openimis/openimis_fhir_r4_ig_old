@@ -7,13 +7,12 @@
     "kind": "resource",
     "abstract": false,
     "type": "Claim",
-    "title": "Claim - Profile",
+    "title": "Claim",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Claim",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
-                "id": "Claim.identifier",
                 "path": "Claim.identifier",
                 "comment": "Claim can have multiple identifiers. The most important one is mapped from ClaimUUID."
             },
@@ -38,22 +37,95 @@
             {
                 "id": "Claim.patient",
                 "path": "Claim.patient",
-                "binding": {
-                    "strength": "required"
-                }
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
             },
             {
-                "id": "Claim.billablePeriod",
-                "path": "Claim.billablePeriod",
-                "comment": "DateFrom and DateTo are mapped to a period of time between them"
+                "path": "Claim.subType",
+                "min":0,
+                "max":"0"
             },
             {
-                "id": "Claim.diagnosis",
-                "path": "Claim.diagnosis"
+                "path": "Claim.insurer",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.fundsReserve",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.related",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.prescription",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.originalPrescription",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.payee",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.referral",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.careTeam",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.procedure",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path": "Claim.accident",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "id": "Claim.extension.diagnosis",
+                "path": "Claim.extension.diagnosis",
+                "min":1,
+                "max":"1",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/Diagnosis"
+                        ]
+                    }
+                ]
             },
             {
                 "id": "Claim.provider",
-                "path": "Claim.provider"
+                "path": "Claim.provider",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole"
+                        ]
+                    }
+                ]
             },
             {
                 "id": "Claim.facility",
@@ -62,19 +134,13 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Practitioner"
+                            "http://localhost:8080/fhir/StructureDefinition/HealthcareService"
                         ]
                     }
                 ]
             },
             {
-                "id": "Claim.item.category.text",
                 "path": "Claim.item.category.text",
-                "base": {
-                    "path": "Claim.item.category.text",
-                    "min": 0,
-                    "max": "1"
-                },
                 "type": [
                     {
                         "code": "string"
@@ -94,8 +160,8 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Medication",
-                            "http://localhost:8080/fhir/StructureDefinition/ActivityDefinition"
+                            "http://localhost:8080/fhir/StructureDefinition/Items",
+                            "http://localhost:8080/fhir/StructureDefinition/Services"
                         ]
                     }
                 ]

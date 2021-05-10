@@ -1,0 +1,122 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://localhost:8080/fhir/StructureDefinition/Items",
+    "name": "Items",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Medication",
+    "title": "Items",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "path":"Medication.form.coding",
+                "min":0,
+                "max":"0",
+                "short": "string part 'tablets', 'pieces', etc.",
+                "definition": "string part 'tablets', 'pieces', etc."
+            },
+            {
+                "id": "Medication.frequency",
+                "path": "Medication.frequency",
+                "base": {
+                    "path": "Medication.frequency",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ]
+            },
+            {
+                "id": "Medication.extension.amountInt",
+                "path": "Medication.extension.amountInt",
+                "base": {
+                    "path": "Medication.extension.amountInt",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ]
+            },
+            {
+                "path": "Medication.amount",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "id": "Medication.extension.unitPrice",
+                "path": "Medication.extension.unitPrice",
+                "type": [
+                    {
+                        "code": "Money"
+                    }
+                ],
+                "comment": "openIMIS extension to Medication url = unitPrice, valueMoney.value as tblItems.ItemPrice valueMoney.currency to be identified"
+            },
+            {
+                "id": "Medication.extension.topic",
+                "path": "Medication.extension.topic",
+                "base": {
+                    "path": "Medication.extension.topic",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/definition-topic"
+                }                
+            },
+            {
+                "id": "Medication.extension.useContext.code",
+                "path": "Medication.extension.useContext.code",
+                "base": {
+                    "path": "Medication.extension.useContext.code",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "UsageContext"
+                    }
+                ],
+                "binding":{
+                    "valueSet":"http://localhost:8080/fhir/ValueSet/vs-usage-context-type"
+                }
+            },
+            {
+                "path":"Medication.status",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"Medication.manufacturer",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"Medication.ingredient",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"Medication.batch",
+                "min":0,
+                "max":"0"
+            }
+        ]
+    }
+}
