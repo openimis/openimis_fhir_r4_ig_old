@@ -2,7 +2,7 @@
     "resourceType":"ValueSet",
     "id": "vs-claimresponsestatus",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/CodeSystem/vs-claimresponsestatus",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-claimresponsestatus",
     "name": "VsClaimresponsestatus",
     "title": "Claim response status Valueset",
     "compose": {

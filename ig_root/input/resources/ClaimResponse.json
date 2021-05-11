@@ -13,11 +13,6 @@
     "differential": {
         "element": [
             {
-                "path": "ClaimResponse.identifier",
-                "min":0,
-                "max":"1"
-            },
-            {
                 "id": "Claimresponse.type",
                 "path": "Claimresponse.type",
                 "type": [
@@ -109,14 +104,6 @@
                 "type": [
                     {
                         "code": "string"
-                    }
-                ]
-            },
-            {
-                "path": "Claimresponse.total.amount",
-                "type": [
-                    {
-                        "code": "Money"
                     }
                 ]
             },
@@ -218,6 +205,56 @@
                         ]
                     }
                 ]
+            },
+            {
+                "path":"ClaimResponse.subtype",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.addItem",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.adjudication",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.preAuthRef",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.preAuthPeriod",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.payeeType",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.fundsReserve",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.formCode",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.form",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ClaimResponse.insurance",
+                "min":0,
+                "max":"0"
             }
         ]
     }

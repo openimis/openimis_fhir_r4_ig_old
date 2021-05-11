@@ -10,75 +10,92 @@
     "type": "Coverage",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
     "derivation": "constraint",
-    "differential": [
-        {
-            "path": "Coverage.identifier",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": false,
-            "isSummary": true
-        },
-        {
-            "path": "Coverage.policyHolder",
-            "sliceName": "Coverage.policyHolder:FamilyID",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": false,
-            "isSummary": false
-        },
-        {
-            "path": "Coverage.period",
-            "definition": "Start date and expiry date are mapped to a period of time between them",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": true,
-            "isSummary": true
-        },
-        {
-            "path": "Coverage.status",
-            "min": 1,
-            "max": "1",
-            "type": [
-                {
-                    "code": "code"
+    "differential": {
+        "element": [
+            {
+                "path": "Coverage.policyHolder",
+                "definition": "We use the policyHolder to represent the reference to the Patient (head of the family). The insurance code is used to point the appropriate Patient.",
+                "type":[
+                    {
+                        "code":"Reference",
+                        "targetProfile":[
+                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "Coverage.status",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://localhost:8080/fhirValueSet/vs-policystatus"
                 }
-            ],
-            "mustSupport": true,
-            "isModifier": true,
-            "isSummary": true,
-            "binding": {
-                "strength": "required",
-                "valueSet": "http://localhost:8080/fhirValueSet/vs-policystatus"
+            },
+            {
+                "path": "Coverage.type",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.subscriber",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.subscriberId",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.beneficiary",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.dependent",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.relationship",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.payor",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.order",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.network",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.costToBeneficiary",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.subrogation",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Coverage.contract",
+                "min": 0,
+                "max": "0"
             }
-        },
-        {
-            "path": "Coverage.contract.term.asset.valuedItem.net",
-            "sliceName": "PolicyValue",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": false,
-            "isSummary": true
-        },
-        {
-            "path": "Coverage.class",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": true,
-            "isSummary": true
-        },
-        {
-            "path": "Coverage.contract.term.offer.party",
-            "sliceName": "OfficerID",
-            "min": 1,
-            "max": "1",
-            "mustSupport": true,
-            "isModifier": false,
-            "isSummary": true
-        }
-    ]
+        ]
+    }
 }

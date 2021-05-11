@@ -96,7 +96,48 @@
                 "reference": {
                     "reference": "CodeSystem/cs-policystatus"
                 }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-maritalstatus"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-relationships"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-relationships"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vs-claimresponsestatus"
+                }
+            },
+            {
+                "reference": {
+                    "reference": "CodeSystem/cs-claimresponsestatus"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "CodeSystem/cs-location"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-location"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-servicetype"
+                }
             }
+            
         ],
         "page": {
             "nameUrl": "toc.html",
@@ -152,6 +193,26 @@
             {
                 "code": "path-resource",
                 "value": "input/observation-policystatus"
+            },
+            {
+                "code": "path-resource",
+                "value": "input/observation-maritalstatus"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-relationship"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-claimresponsestatus"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-location"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-servicetype"
             },
             {
                 "code": "autoload-resources",

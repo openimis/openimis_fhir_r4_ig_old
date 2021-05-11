@@ -39,7 +39,7 @@
             },
             {
                 "id": "HealthcareService.specialty",
-                "path": "HealthcareService.scpecialty",
+                "path": "HealthcareService.specialty",
                 "type": [
                     {
                         "code": "CodeableConcept"

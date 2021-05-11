@@ -1,0 +1,44 @@
+{
+    "resourceType":"CodeSystem",
+    "id": "cs-relationships",
+    "status": "draft",
+    "content": "complete",
+    "url": "http://localhost:8080/fhir/CodeSystem/cs-relationships",
+    "name": "CsRelationships",
+    "title": "Relatationship CodeSystem",
+    "concept": [
+        {
+            "code": "1",
+            "display": "Brother/Sister"
+        },
+        {
+            "code": "2",
+            "display": "Father/Mother"
+        },
+        {
+            "code": "3",
+            "display": "Uncle/Aunt"
+        },
+        {
+            "code":"4",
+            "display":"Son/Daughter"
+        },
+        {
+            "code": "5",
+            "display": "Grand parents"
+        },
+        {
+            "code": "6",
+            "display": "Employee"
+        },
+        {
+            "code": "7",
+            "display": "Others"
+        },
+        {
+            "code": "8",
+            "display": "Spouse"
+        }
+    ]
+
+}

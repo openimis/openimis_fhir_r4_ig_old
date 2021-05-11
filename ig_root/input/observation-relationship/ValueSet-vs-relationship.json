@@ -1,0 +1,13 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-relationships",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/vs-relationships",
+    "title": "Relationships ValueSet",
+    "name": "VsRelationships",
+    "compose": {
+        "include": [{
+            "system": "http://localhost:8080/fhir/CodeSystem/cs-relationships"
+        }]
+    }
+}

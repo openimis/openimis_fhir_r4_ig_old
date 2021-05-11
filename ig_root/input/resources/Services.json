@@ -13,32 +13,6 @@
     "differential": {
         "element": [
             {
-                "id": "ActivityDefinition.identifier",
-                "path": "ActivityDefinition.identifier",
-                "definition": "Identifier of the Activity Definition"
-            },
-            {
-                "id": "ActivityDefinition.status",
-                "path": "ActivityDefinition.status"
-            },
-            {
-                "id": "ActivityDefinition.date",
-                "path": "ActivityDefinition.date"
-            },
-            {
-                "id": "ActivityDefinition.name",
-                "path": "ActivityDefinition.name"
-            },
-            {
-                "id": "ActivityDefinition.title",
-                "path": "ActivityDefinition.title",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ]
-            },
-            {
                 "id": "ActivityDefinition.useContext.code",
                 "path": "ActivityDefinition.useContext.code",
                 "type": [
@@ -52,12 +26,15 @@
                 }
             },
             {
-                "id": "ActivityDefinition.topic",
-                "path": "ActivityDefinition.topic"
-            },
-            {
-                "id": "ActivityDefinition.code",
-                "path": "AcitivityDefinition.code"
+                "path": "ActivityDefinition.topic",
+                "type":[
+                    {
+                        "code":"CodeableConcept"
+                    }
+                ],
+                "binding":{
+                    "valueSet": "http://localhost:8080/fhirValueSet/vs-servicetype"
+                }
             },
             {
                 "id": "ActivityDefinition.extension.frequency",
@@ -85,6 +62,196 @@
                 "type": [{
                     "code": "Money"
                 }]
+            },
+            {
+                "path":"ActivityDefinition.url",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.version",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.subtitle",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.experimental",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.subject",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.publisher",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.contact",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.description",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.jurisdiction",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.purpose",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.usage",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.copyright",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.approvalDate",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.lastReviewDate",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.effectivePeriod",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.author",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.editor",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.reviewer",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.endorser",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.relatedArtifact",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.library",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.kind",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.profile",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.intent",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.priority",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.doNotPerform",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.timing",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.location",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.participant",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.product",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.quantity",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.dosage",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.bodySite",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.specimenRequirement",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.observationRequirement",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.observationResultRequirement",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.transform",
+                "min":0,
+                "max":"0"
+            },
+            {
+                "path":"ActivityDefinition.dynamicValue",
+                "min":0,
+                "max":"0"
             }
         ]
     }

@@ -1,0 +1,33 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-maritalstatus",
+    "status": "draft",
+    "url": "http://localhost:8080/fhir/ValueSet/maritalstatus",
+    "title": "Marital Status ValueSet",
+    "name": "VsMaritalStatus",
+    "compose": {
+        "include": [{
+            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+            "concept": [
+                {
+                    "code": "D"
+                },
+                {
+                    "code": "W"
+                },
+                {
+                    "code": "S",
+                    "display": "Single",
+                    "definition": "Currently single"
+                },
+                {
+                    "code": "M"
+                },
+                {
+                    "code": "N",
+                    "display": "Not specified"
+                }
+            ]
+        }]
+    }
+}

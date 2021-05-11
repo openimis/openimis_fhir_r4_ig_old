@@ -1,0 +1,25 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-servicetype",
+    "status": "draft",
+    "url": "http://localhost:8080/fhirValueSet/vs-servicetype",
+    "name": "vsServicetype",
+    "title": "Service type ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/definition-topic",
+                "concept": [
+                    {
+                        "code":"P",
+                        "display":"Preventive"
+                    },
+                    {
+                        "code":"C",
+                        "display":"Curative"
+                    }
+                ]
+            }
+        ]
+    }
+}
