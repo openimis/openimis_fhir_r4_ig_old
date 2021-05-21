@@ -2,12 +2,12 @@
     "resourceType":"ValueSet",
     "id": "vs-rejectionreason",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/CodeSystem/vs-rejectionreason",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-rejectionreason",
     "name": "VsRejectionreason",
     "title": "Rejection reason Valueset",
     "compose": {
         "include": [{
-            "system": "http://localhost:8080/fhir/CodeSystem/cs-rejectionreason"
+            "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-rejectionreason"
         }]
     }
 }

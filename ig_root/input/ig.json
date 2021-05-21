@@ -2,7 +2,7 @@
     "resourceType": "ImplementationGuide",
     "id": "fhir-ig-openimis",
     "version": "0.0.1",
-    "url": "http://localhost:8080/fhir/ImplementationGuide/fhir-ig-openimis",
+    "url": "https://demo.openimis.org/fhir-ig/ImplementationGuide/fhir-ig-openimis",
     "name": "openIMIS_IG",
     "title": "openIMIS Implementation Guide",
     "packageId": "swissTPH.fhir.openimis",
@@ -136,6 +136,31 @@
                 "reference":{
                     "reference": "ValueSet/vs-servicetype"
                 }
+            },
+            {
+                "reference":{
+                    "reference":"ValueSet/vs-feedbackstatus"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-coverageeligibilityreq-category"
+                }
+            },
+            {
+                "reference":{
+                    "reference":"CodeSystem/cs-coverageeligibilityreq-category"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-legalstate"
+                }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-contractstatus"
+                }
             }
             
         ],
@@ -213,6 +238,22 @@
             {
                 "code":"path-resource",
                 "value":"input/observation-servicetype"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-feedback"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-ceritem-category"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-legalstate"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-contractstatus"
             },
             {
                 "code": "autoload-resources",

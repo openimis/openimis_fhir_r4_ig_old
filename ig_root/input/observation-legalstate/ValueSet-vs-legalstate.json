@@ -1,0 +1,23 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-legalstate",
+    "status": "draft",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-legalstate",
+    "name": "VsLegalstate",
+    "title": "Legal state ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/contract-legalstate",
+                "concept": [
+                    {
+                        "code": "offered"
+                    },
+                    {
+                        "code": "renewed"
+                    }
+                ]
+            }
+        ]
+    }
+}

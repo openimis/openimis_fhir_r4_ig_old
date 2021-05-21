@@ -3,7 +3,7 @@
     "id": "cs-hflevels",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-hflevels",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-hflevels",
     "name": "CsHflevels",
     "title": "Health facility levels CodeSystem",
     "concept": [

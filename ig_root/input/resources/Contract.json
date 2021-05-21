@@ -1,0 +1,341 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Contract",
+    "name": "Contract",
+    "status": "draft",
+    "title": "Contract",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Contract",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Contract",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "path": "Contract.identifier",
+                "min":2,
+                "max":"2"
+            },
+            {
+                "path": "Contract.legalState",
+                "type": [
+                    {
+                        "code":"CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-legalstate"
+                }
+            },
+            {
+                "path": "Contract.status",
+                "type": [
+                    {
+                        "code":"code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-contractstatus"
+                }
+            },
+            {
+                "path": "Contract.version",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.url",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.instantiatesCanonical",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.instantiatesUri",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.contentDerivative",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.issued",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.applies",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.expirationType",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.subject",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.authority",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.domain",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.site",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.name",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.title",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.subtitle",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.alias",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.author",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.scope",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.topic",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.type",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.subType",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.contentDefinition",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.supportingInfo",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.relevantHistory",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.friendly",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.legal",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.rule",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.legallyBinding",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.identifier",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.issued",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.applies",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.topic",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.type",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.subType",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.text",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.securityLabel",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.offer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.action",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.group",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.scope",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.type",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.subType",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.relationship",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.linkId",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.condition",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.periodType",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.text",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.answer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.effectiveTime",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.quantity",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.points",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.payment",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.paymentDate",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.responsible",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.recipient",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.term.asset.securityLabelNumber",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.signer.type",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.signer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "Contract.signature",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

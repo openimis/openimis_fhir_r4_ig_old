@@ -1,6 +1,6 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/HealthcareService",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/HealthcareService",
     "name": "HealthcareService",
     "status": "draft",
     "fhirVersion": "4.0.1",
@@ -22,7 +22,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-hflevels"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-hflevels"
                 }
             },
             {
@@ -34,7 +34,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-hfcaretypes"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-hfcaretypes"
                 }
             },
             {
@@ -55,7 +55,7 @@
                     {
                         "code":"Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Location"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Location"
                         ]
                     }
                 ]
@@ -78,7 +78,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-hcsprograms"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-hcsprograms"
                 }
             },
             {
@@ -88,7 +88,7 @@
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/Location"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Location"
                         ]
                     }
                 ]

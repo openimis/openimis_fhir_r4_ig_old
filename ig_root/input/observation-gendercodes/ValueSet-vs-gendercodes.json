@@ -2,12 +2,12 @@
     "resourceType":"ValueSet",
     "id":"vs-gendercodes",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-gendercodes",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-gendercodes",
     "title": "Gender Codes ValueSet",
     "name": "VsGendercodes",
     "compose": {
         "include": [{
-            "system": "http://localhost:8080/fhir/CodeSystem/cs-gendercodes"
+            "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-gendercodes"
         }]
     }
 }

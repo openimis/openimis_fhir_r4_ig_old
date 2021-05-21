@@ -2,12 +2,12 @@
     "resourceType":"ValueSet",
     "id":"vs-hfcaretypes",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-hfcaretypes",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-hfcaretypes",
     "title": "Health facility care types ValueSet",
     "name": "VsHfcaretypes",
     "compose": {
         "include": [{
-            "system": "http://localhost:8080/fhir/CodeSystem/cs-hfcaretypes"
+            "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-hfcaretypes"
         }]
     }
 }

@@ -1,0 +1,18 @@
+{
+    "resourceType":"ValueSet",
+    "id":"vs-feedbackstatus",
+    "status": "draft",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-feedbackstatus",
+    "title": "Feedback status Codes ValueSet",
+    "name": "VsFeedbackstatus",
+    "compose": {
+        "include": [{
+            "system": "http://hl7.org/fhir/request-status",
+            "concept": [
+                {
+                    "code":"active"
+                }
+            ]
+        }]
+    }
+}

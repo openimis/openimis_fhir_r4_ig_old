@@ -1,0 +1,64 @@
+{
+    "resourceType":"StructureDefinition",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Family",
+    "name": "Family",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Group",
+    "title": "Family",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Group",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+              "path": "Group.active",
+              "min": 0,
+              "max":"0"
+            },
+            {
+              "path": "Group.type",
+              "type":[
+                  {
+                      "code": "code"
+                  }
+              ],
+              "binding":{
+                  "strength":"required",
+                  "valueSet": [
+                      "https://demo.openimis.org/fhir-ig/ValueSet/vs-familytype"
+                  ]
+              },
+              "fixed": "person"
+            },
+            {
+              "path": "Group.actual",
+              "fixed": true
+            },
+            {
+              "path": "Group.photo",
+              "min": 0,
+              "max": "0"
+            },
+            {
+              "path": "Group.qualification",
+              "min": 0,
+              "max": "0"
+            },
+            {
+              "path":"Group.communication",
+              "min":0,
+              "max":"0"
+            },
+            {
+              "path": "Group.name",
+              "definition": "Contains value that are being mapped for both LastNam and OtherNames fields"
+            },
+            {
+              "path": "Group.telecom",
+              "definition": "Contains values that are being mapped for both Phone and Email fields"
+            }
+        ]
+    }
+}

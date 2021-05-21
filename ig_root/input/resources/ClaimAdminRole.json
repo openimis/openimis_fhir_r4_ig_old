@@ -1,6 +1,6 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdminRole",
     "name": "ClaimAdminRole",
     "status": "draft",
     "title": "Claim Admin Role",
@@ -13,14 +13,13 @@
     "differential": {
         "element": [
             {
-                "id": "PractitionerRole.practitioner",
                 "path": "PractitionerRole.practitioner",
                 "comment": "Example of reference (where '{ClaimAdminCode}' is the Claim Admin code): 'Practitioner/{ClaimAdminCode}'",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdmin"
                         ]
                     }
                 ]
@@ -56,14 +55,13 @@
                 "max": "0"
             },
             {
-                "id": "PractitionerRole.healthcareService",
                 "path": "PractitionerRole.healthcareService",
                 "comment": "example of reference (where '{HFCode}' is the health facility code): 'HealthcareService/{HFUUID}'",
                 "type":[
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/HealthcareService"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/HealthcareService"
                         ]
                     }
                 ]

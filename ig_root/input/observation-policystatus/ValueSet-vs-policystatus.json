@@ -2,13 +2,13 @@
     "resourceType": "ValueSet",
     "id": "vs-policystatus",
     "status": "draft",
-    "url": "http://localhost:8080/fhirValueSet/vs-policystatus",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-policystatus",
     "name": "VsPolicystatus",
     "title": "Policystatus ValueSet",
     "compose": {
         "include": [
             {
-                "system": "http://localhost:8080/fhir/ValueSet/cs-policystatus"
+                "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-policystatus"
             }
         ]
     }

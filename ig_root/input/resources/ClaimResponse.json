@@ -1,6 +1,6 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimResponse",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimResponse",
     "name": "ClaimResponse",
     "status": "draft",
     "fhirVersion": "4.0.1",
@@ -13,7 +13,6 @@
     "differential": {
         "element": [
             {
-                "id": "Claimresponse.type",
                 "path": "Claimresponse.type",
                 "type": [
                     {
@@ -22,11 +21,10 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimresponse-type"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimresponse-type"
                 }
             },
             {
-                "id": "ClaimResponse.status",
                 "path": "ClaimResponse.status",
                 "short": "1 | 2 | 4 | 8 | 16",
                 "type": [
@@ -36,20 +34,17 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimresponsestatus"
-                },
-                "isSummary": true,
-                "isModifier": true
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimresponsestatus"
+                }
             },
             {
-                "id": "ClaimResponse.patient",
                 "path": "ClaimResponse.patient",
                 "short": "Insuree UUID",
                 "type": [
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
                         ]
                     }
                 ]
@@ -71,15 +66,14 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin",
-                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole",
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdmin",
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdminRole",
                             "ORGANISATION"
                         ]
                     }
                 ]
             },
             {
-                "id": "ClaimResponse.extension.outcome",
                 "path": "ClaimResponse.extension.outcome",
                 "short": "Claim status",
                 "type": [
@@ -89,11 +83,10 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimstatus"
                 }
             },
             {
-                "id": "Claimresponse.extension.adjustmentReason",
                 "path": "Claimresponse.extension.adjustmentReason",
                 "short": "Claim Adjustment",
                 "base": {
@@ -116,7 +109,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimstatus"
                 }
             },
             {
@@ -140,7 +133,7 @@
                     }
                 ],
                 "binding": {
-                    "valueSet": "http://localhost:8080/fhir/CodeSystem/vs-rejectionreason"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/CodeSystem/vs-rejectionreason"
                 }
             },
             {
@@ -151,17 +144,8 @@
                     }
                 ],
                 "binding": {
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimstatus"
                 }
-            },
-            {
-                "id": "Claimresponse.item.adjudication.reason",
-                "path": "Claimresponse.item.adjudication.reason",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ]
             },
             {
                 "path": "Claimresponse.disposition",
@@ -174,23 +158,26 @@
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/Claim"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Claim"
                         ]
                     }
                 ]
             },
             {
-                "id": "Claimresponse.extension.valuePeriod.billablePeriod",
                 "path": "Claimresponse.extension.valuePeriod.billablePeriod",
                 "comment": "DateFrom and DateTo are mapped to a period of time between them",
                 "base": {
                     "path": "Claimresponse.extension.valuePeriod.billablePeriod",
                     "min": 1,
                     "max": "1"
-                }
+                },
+                "type":[
+                    {
+                        "code":"Period"
+                    }
+                ]
             },
             {
-                "id": "Claimresponse.extension.valueReference.diagnosis",
                 "path": "Claimresponse.extension.valueReference.diagnosis",
                 "base": {
                     "path": "Claimresponse.extension.valueReference.diagnosis",
@@ -201,7 +188,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Diagnosis"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Diagnosis"
                         ]
                     }
                 ]

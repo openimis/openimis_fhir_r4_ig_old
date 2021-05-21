@@ -1,0 +1,144 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/CoverageEligibilityRequest",
+    "name": "CoverageEligibilityRequest",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "CoverageEligibilityRequest",
+    "title": "Coverage Eligibility Request",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "path": "CoverageEligibilityRequest.patient",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.productOrService",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-coverageeligibilityreq-category"
+                }
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.category",
+                "short": "***Placeholder***"
+            },
+            {
+                "path": "CoverageEligibilityRequest.identifier",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.status",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.priority",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.purpose",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.serviced",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.created",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.enterer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.provider",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.insurer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.facility",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.supportingInfo",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.insurance",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.supportingInfoSequence",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.modifier",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.provider",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.quantity",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.unitPrice",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.facility",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.diagnosis",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityRequest.item.detail",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

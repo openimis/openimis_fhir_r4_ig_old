@@ -1,13 +1,15 @@
 {
-    "resourceType":"ValueSet",
-    "id":"vs-relationships",
+    "resourceType": "ValueSet",
+    "id": "vs-relationships",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-relationships",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-relationships",
     "title": "Relationships ValueSet",
     "name": "VsRelationships",
     "compose": {
-        "include": [{
-            "system": "http://localhost:8080/fhir/CodeSystem/cs-relationships"
-        }]
+        "include": [
+            {
+                "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-relationships"
+            }
+        ]
     }
 }

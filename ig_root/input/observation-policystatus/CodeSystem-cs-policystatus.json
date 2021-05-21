@@ -3,7 +3,7 @@
     "id": "cs-policystatus",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-policystatus",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-policystatus",
     "name": "CsPolicystatus",
     "title": "Policy status CodeSystem",
     "concept": [

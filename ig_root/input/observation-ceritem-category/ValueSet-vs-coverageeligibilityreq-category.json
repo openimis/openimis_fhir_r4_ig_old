@@ -1,0 +1,15 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-coverageeligibilityreq-category",
+    "status": "draft",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-coverageeligibilityreq-category",
+    "name": "VsCoverageeligibilityreqCategory",
+    "title": "Coverage Eligibility Request item category ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-coverageeligibilityreq-category"
+            }
+        ]
+    }
+}

@@ -1,9 +1,9 @@
 {
-    "resourceType":"CodeSystem",
+    "resourceType": "CodeSystem",
     "id": "cs-hcsprograms",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-hcsprograms",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-hcsprograms",
     "name": "CsHcsprograms",
     "title": "Health care service programs CodeSystem",
     "concept": [
@@ -25,5 +25,4 @@
             "display": "Private organization"
         }
     ]
-
 }

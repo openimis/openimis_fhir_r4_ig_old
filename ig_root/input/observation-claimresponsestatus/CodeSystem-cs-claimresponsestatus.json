@@ -3,7 +3,7 @@
     "id": "cs-claimresponsestatus",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-claimresponsestatus",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-claimresponsestatus",
     "name": "CsClaimresponsestatus",
     "title": "Claim response status CodeSystem",
     "concept": [

@@ -2,7 +2,7 @@
     "resourceType":"ValueSet",
     "id":"vs-maritalstatus",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/maritalstatus",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-maritalstatus",
     "title": "Marital Status ValueSet",
     "name": "VsMaritalStatus",
     "compose": {

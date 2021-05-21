@@ -3,7 +3,7 @@
     "id": "cs-hfcaretypes",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-hfcaretypes",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-hfcaretypes",
     "name": "CsHfcaretype",
     "title": "Health facility care types CodeSystem",
     "concept": [

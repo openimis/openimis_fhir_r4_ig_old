@@ -1,6 +1,6 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/Diagnosis",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Diagnosis",
     "name": "Diagnosis",
     "status": "draft",
     "title": "Diagnosis",
@@ -13,18 +13,13 @@
     "differential": {
         "element": [
             {
-                "id": "Condition.recordedDate:ValidityFrom",
-                "path": "Condition.recordedDate",
-                "sliceName": "ValidityFrom"
-            },
-            {
                 "path": "Condition.subject",
                 "definition": "Reference to Patient resource",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
                         ]
                     }
                 ]

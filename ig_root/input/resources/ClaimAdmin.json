@@ -1,6 +1,6 @@
 {
     "resourceType":"StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/ClaimAdmin",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdmin",
     "name": "Claim Admin",
     "status": "draft",
     "fhirVersion": "4.0.1",
@@ -13,7 +13,6 @@
     "differential": {
         "element": [
             {
-              "id": "Practitioner.identifier",
               "path": "Practitioner.identifier",
               "comment": "Identifier field contains values that are being mapped for both claimAdminUUID and claimAdminCode fields"
             },
@@ -48,12 +47,10 @@
               "max":"0"
             },
             {
-              "id": "Practitioner.name",
               "path": "Practitioner.name",
               "definition": "Contains value that are being mapped for both LastNam and OtherNames fields"
             },
             {
-              "id": "Practitioner.telecom",
               "path": "Practitioner.telecom",
               "definition": "Contains values that are being mapped for both Phone and Email fields"
             }

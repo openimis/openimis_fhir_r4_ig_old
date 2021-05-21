@@ -1,0 +1,236 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/CoverageEligibilityResponse",
+    "name": "CoverageEligibilityResponse",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "CoverageEligibilityResponse",
+    "title": "Coverage Eligibility Response",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "path": "CoverageEligibilityResponse.patient",
+                "comment": "Not Mapped",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
+                        ]
+                    }
+                ]
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.benefit.allowed",
+                "definition": "prod id & total admissions left & visits left & consultations left & surgeries left & deliveries left & antenatal left & service left & item left", 
+                "type":[
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "unsignedInt"
+                    },
+                    {
+                        "code": "Money"
+                    },
+                    {
+                        "code": "Money"
+                    },
+                    {
+                        "code": "Money"
+                    },
+                    {
+                        "code": "Money"
+                    },
+                    {
+                        "code": "Money"
+                    }
+
+                ]
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.excluded",
+                "comment": "the FHIR field contains information about excluding so the OpenIMIS value will be negated",
+                "definition": "is the item ok & is the service ok",
+                "type": [
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "boolean"
+                    }
+                ]
+            },
+            {
+                "path": "CoverageEligibilityResponse.identifier",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.status",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.requestor",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.purpose",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.serviced",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.created",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.request",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.outcome",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurer",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.disposition",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.preAuthRef",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.form",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.error",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.coverage",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.inforce",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.benefitPeriod",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.category",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.productOrService",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.modifier",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.provider",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.name",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.description",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.network",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.unit",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.term",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.benefit.used",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.authorizationRequired",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.authorizationSupporting",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CoverageEligibilityResponse.insurance.item.authorizationUrl",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

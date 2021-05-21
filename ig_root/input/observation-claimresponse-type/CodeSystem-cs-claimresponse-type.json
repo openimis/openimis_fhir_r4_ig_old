@@ -3,7 +3,7 @@
     "id": "cs-claimresponse-type",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-claimresponse-type",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-claimresponse-type",
     "name": "CsClaimresponseType",
     "title": "Claim response type CodeSystem",
     "concept": [

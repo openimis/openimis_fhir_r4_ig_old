@@ -1,0 +1,19 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "cs-coverageeligibilityreq-category",
+    "status": "draft",
+    "content": "complete",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-coverageeligibilityreq-category",
+    "name": "CsCoverageeligibilityreqCategory",
+    "title": "Coverage Eligibility request item category CodeSystem",
+    "concept": [
+        {
+            "code": "service",
+            "display": "service"
+        },
+        {
+            "code": "item",
+            "display": "item"
+        }
+    ]
+}

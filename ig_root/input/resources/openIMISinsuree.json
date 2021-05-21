@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree",
+  "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree",
   "name": "openIMISinsuree",
   "description": "The openIMIS Insuree object mapped to the FHIR R4 Patient resource",
   "title": "openIMISinsuree",
@@ -35,7 +35,7 @@
         "binding": {
           "strength": "extensible",
           "description": "The domestic partnership status of a person.",
-          "valueSet": "http://localhost:8080/fhir/ValueSet/maritalstatus"
+          "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/maritalstatus"
         }
       },
       {
@@ -49,8 +49,8 @@
             "code": "Reference",
             "targetProfile": [
               "REFERENCE ORGANISATION - Placeholder",
-              "http://hl7.org/fhir/StructureDefinition/ClaimAdmin",
-              "http://hl7.org/fhir/StructureDefinition/ClaimAdminRole"
+              "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdmin",
+              "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdminRole"
             ]
           }
         ]
@@ -61,7 +61,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/openIMISinsuree"
+              "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
             ]
           }
         ]
@@ -76,7 +76,7 @@
         "binding": {
           "strength": "required",
           "description": "The type of link between this patient resource and another patient resource.",
-          "valueSet": "http://localhost:8080/fhir/ValueSet/vs-relationships"
+          "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-relationships"
         }
       },
       {

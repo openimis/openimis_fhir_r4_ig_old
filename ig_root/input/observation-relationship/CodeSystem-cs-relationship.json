@@ -1,9 +1,9 @@
 {
-    "resourceType":"CodeSystem",
+    "resourceType": "CodeSystem",
     "id": "cs-relationships",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-relationships",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-relationships",
     "name": "CsRelationships",
     "title": "Relatationship CodeSystem",
     "concept": [
@@ -20,8 +20,8 @@
             "display": "Uncle/Aunt"
         },
         {
-            "code":"4",
-            "display":"Son/Daughter"
+            "code": "4",
+            "display": "Son/Daughter"
         },
         {
             "code": "5",
@@ -40,5 +40,4 @@
             "display": "Spouse"
         }
     ]
-
 }

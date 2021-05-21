@@ -1,0 +1,67 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Feedback",
+    "name": "Feedback",
+    "status": "draft",
+    "title": "Feedback",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "CommunicationRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "CommunicationRequest.extension.reasonCode",
+                "path": "CommunicationRequest.extension.reasonCode",
+                "base": {
+                    "path": "CommunicationRequest.extension.reasonCode",
+                    "min":0,
+                    "max":"1"
+                },
+                "type": [
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "integer"
+                    }
+                ]
+            },
+            {
+                "path": "CommunicationRequest.status",
+                "type": [
+                    {
+                        "code":"code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-feedbackstatus"
+                }
+            },
+            {
+                "path": "CommunicationRequest.basedOn",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CommunicationRequest.replaces",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "path": "CommunicationRequest.groupIdentifier",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

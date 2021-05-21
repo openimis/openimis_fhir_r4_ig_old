@@ -2,7 +2,7 @@
     "resourceType":"ValueSet",
     "id":"vs-usage-context-type",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-usage-context-type",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-usage-context-type",
     "title": "Usage Context Type ValueSet",
     "name": "VsUsageContextType",
     "compose": {

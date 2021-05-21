@@ -2,12 +2,12 @@
     "resourceType":"ValueSet",
     "id": "vs-claimresponsestatus",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-claimresponsestatus",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimresponsestatus",
     "name": "VsClaimresponsestatus",
     "title": "Claim response status Valueset",
     "compose": {
         "include": [{
-            "system": "http://localhost:8080/fhir/CodeSystem/cs-claimresponsestatus"
+            "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-claimresponsestatus"
         }]
     }
 }

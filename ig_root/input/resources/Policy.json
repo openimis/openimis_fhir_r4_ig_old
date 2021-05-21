@@ -1,10 +1,9 @@
 {
     "resourceType": "StructureDefinition",
     "name": "Policy",
-    "url": "http://localhost:8080/fhir/StructureDefinition/Policy",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Policy",
     "title": "Policy openIMIS",
     "status": "draft",
-    "description": "",
     "kind": "resource",
     "abstract": false,
     "type": "Coverage",
@@ -19,7 +18,7 @@
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
                         ]
                     }
                 ]
@@ -33,7 +32,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhirValueSet/vs-policystatus"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-policystatus"
                 }
             },
             {

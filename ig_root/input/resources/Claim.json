@@ -1,6 +1,6 @@
 {
     "resourceType": "StructureDefinition",
-    "url": "http://localhost:8080/fhir/StructureDefinition/Claim",
+    "url": "https://demo.openimis.org/fhir-ig/StructureDefinition/Claim",
     "name": "Claim",
     "status": "draft",
     "fhirVersion": "4.0.1",
@@ -13,11 +13,6 @@
     "differential": {
         "element": [
             {
-                "path": "Claim.identifier",
-                "comment": "Claim can have multiple identifiers. The most important one is mapped from ClaimUUID."
-            },
-            {
-                "id": "Claim.status",
                 "path": "Claim.status",
                 "comment": "Has the entered state by default",
                 "short": "Entered | Checked | Reviewed | Valuated",
@@ -28,20 +23,17 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://localhost:8080/fhir/ValueSet/vs-claimstatus"
+                    "valueSet": "https://demo.openimis.org/fhir-ig/ValueSet/vs-claimstatus"
                 },
-                "isSummary": true,
-                "isModifier": true,
                 "defaultValueCode": "Entered"
             },
             {
-                "id": "Claim.patient",
                 "path": "Claim.patient",
                 "type":[
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/openIMISinsuree"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/openIMISinsuree"
                         ]
                     }
                 ]
@@ -102,7 +94,6 @@
                 "max":"0"
             },
             {
-                "id": "Claim.extension.diagnosis",
                 "path": "Claim.extension.diagnosis",
                 "min":1,
                 "max":"1",
@@ -110,45 +101,39 @@
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/Diagnosis"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Diagnosis"
                         ]
                     }
                 ]
             },
             {
-                "id": "Claim.provider",
                 "path": "Claim.provider",
                 "type":[
                     {
                         "code":"Reference",
                         "targetProfile":[
-                            "http://localhost:8080/fhir/StructureDefinition/ClaimAdminRole"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/ClaimAdminRole"
                         ]
                     }
                 ]
             },
             {
-                "id": "Claim.facility",
                 "path": "Claim.facility",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/HealthcareService"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/HealthcareService"
                         ]
                     }
                 ]
             },
             {
-                "path": "Claim.item.category.text",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ]
+                "path": "Claim.item.category.coding",
+                "min":0,
+                "max":"0"
             },
             {
-                "id": "Claim.item.extension.productOrServiceReference",
                 "path": "Claim.item.extension.productOrServiceReference",
                 "definition": "Reference to Medication resource if it is a medical item, reference to ActivityDefinition resource if it is medical service",
                 "base": {
@@ -160,8 +145,8 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://localhost:8080/fhir/StructureDefinition/Items",
-                            "http://localhost:8080/fhir/StructureDefinition/Services"
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Items",
+                            "https://demo.openimis.org/fhir-ig/StructureDefinition/Services"
                         ]
                     }
                 ]

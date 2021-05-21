@@ -2,13 +2,13 @@
     "resourceType": "ValueSet",
     "id": "vs-hcsprograms",
     "status": "draft",
-    "url": "http://localhost:8080/fhir/ValueSet/vs-hcsprograms",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-hcsprograms",
     "name": "VsHcsprograms",
     "title": "Healthcare service programs Valueset",
     "compose": {
         "include": [
             {
-                "system": "http://localhost:8080/fhir/CodeSystem/cs-hcsprograms"
+                "system": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-hcsprograms"
             }
         ]
     }

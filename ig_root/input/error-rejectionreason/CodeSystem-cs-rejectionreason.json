@@ -3,7 +3,7 @@
     "id": "cs-rejectionreason",
     "status": "draft",
     "content": "complete",
-    "url": "http://localhost:8080/fhir/CodeSystem/cs-rejectionreason",
+    "url": "https://demo.openimis.org/fhir-ig/CodeSystem/cs-rejectionreason",
     "name": "CsRejectionreason",
     "title": "Rejection reason CodeSystem",
     "concept": [

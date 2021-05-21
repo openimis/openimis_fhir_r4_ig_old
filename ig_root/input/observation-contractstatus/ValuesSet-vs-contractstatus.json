@@ -1,0 +1,32 @@
+{
+    "resourceType": "ValueSet",
+    "id": "vs-contractstatus",
+    "status": "draft",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-contractstatus",
+    "name": "VsContractstatus",
+    "title": "Contract status ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/contract-status",
+                "concept": [
+                    {
+                        "code": "offered"
+                    },
+                    {
+                        "code": "executed"
+                    },
+                    {
+                        "code": "disputed"
+                    },
+                    {
+                        "code": "terminated"
+                    },
+                    {
+                        "code": "executable"
+                    }
+                ]
+            }
+        ]
+    }
+}

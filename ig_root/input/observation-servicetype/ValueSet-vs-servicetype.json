@@ -2,8 +2,8 @@
     "resourceType": "ValueSet",
     "id": "vs-servicetype",
     "status": "draft",
-    "url": "http://localhost:8080/fhirValueSet/vs-servicetype",
-    "name": "vsServicetype",
+    "url": "https://demo.openimis.org/fhir-ig/ValueSet/vs-servicetype",
+    "name": "VsServicetype",
     "title": "Service type ValueSet",
     "compose": {
         "include": [
@@ -11,12 +11,12 @@
                 "system": "http://terminology.hl7.org/CodeSystem/definition-topic",
                 "concept": [
                     {
-                        "code":"P",
-                        "display":"Preventive"
+                        "code": "P",
+                        "display": "Preventive"
                     },
                     {
-                        "code":"C",
-                        "display":"Curative"
+                        "code": "C",
+                        "display": "Curative"
                     }
                 ]
             }
