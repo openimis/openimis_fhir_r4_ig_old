@@ -15,7 +15,7 @@ def structureDefinition(url):
     data['resourceType'] = 'StructureDefinition'
     name = input('Specify the name (machine-readable) of the resource\n')
     data['name'] = name
-    data['url'] = url + '/StructureDefinition/'+name
+    data['url'] = url+'StructureDefinition/'+name if url.endswith('/') else url+'/StructureDefinition/'+name
     title = input('Specify the title (user-friendly) of the resource\n')
     data['title'] = title
     status = input(
@@ -36,8 +36,8 @@ def structureDefinition(url):
     typ = input('The type this structure describes. If the derivation kind is "specialization" then this is the master definition for a type, and there is always one of these (a data type, an extension, a resource, including abstract ones). Otherwise the structure is a constraint on the stated type (cannot be abstract). References are URLs that are relative to http://hl7.org/fhir/StructureDefinition\n')
     data['type'] = typ
     baseDefinition = input(
-        'Definition that this type is constrained/specialized from. Absolute URL has to be provided. (Optional)\n')
-    data['type'] = baseDefinition
+        '(Base definition) Definition that this type is constrained/specialized from (Base Definition). Absolute URL has to be provided. (Optional)\n')
+    data['baseDefinition'] = baseDefinition
     derivation = input(
         'How the type relates to the base definition specialization | constraint (Optional)\n')
     if derivation:
@@ -170,7 +170,7 @@ def structureDefinition(url):
                     base["min"] = min
                     base["max"] = max
                 el_type = input(
-                    "Data type and Profile for this element (Optional)")
+                    "Data type and Profile for this element (Optional). Press any key to define it")
                 if el_type:
                     el_type = []
                     el_type_1 = {}
@@ -195,7 +195,7 @@ def structureDefinition(url):
                 isSummary = input(
                     "Whether the element should be included if a client requests a search with the parameter _summary = true")
                 binding = input(
-                    "ValueSet details if this is coded (what Valueset to bind it to)")
+                    "ValueSet details if this is coded (what Valueset to bind it to). Press any key to define it")
                 if binding:
                     binding = {}
                     strength = input(
@@ -299,7 +299,7 @@ def valueSet(url):
     status = input(
         'what is the status of the system? active | retired | draft | unknown\n')
     data['status'] = status
-    data['url'] = url+'ValueSet'+id
+    data['url'] = (url+'ValueSet/'+id) if url.endswith('/') else (url+'/ValueSet'+id)
     name = input('Specify the name (machine-readable) of the resource\n')
     data['name'] = name
     title = input('Specify the title (user-friendly) of the resource\n')

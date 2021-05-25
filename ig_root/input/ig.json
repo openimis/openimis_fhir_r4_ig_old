@@ -161,6 +161,11 @@
                 "reference":{
                     "reference": "ValueSet/vs-contractstatus"
                 }
+            },
+            {
+                "reference":{
+                    "reference": "ValueSet/vs-policyholdercontact"
+                }
             }
             
         ],
@@ -254,6 +259,10 @@
             {
                 "code":"path-resource",
                 "value":"input/observation-contractstatus"
+            },
+            {
+                "code":"path-resource",
+                "value":"input/observation-policyholdercontact"
             },
             {
                 "code": "autoload-resources",

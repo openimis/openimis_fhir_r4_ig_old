@@ -1,0 +1,16 @@
+{
+  "package-id": "swissTPH.fhir.openimis",
+  "title": "openIMIS Documentation",
+  "canonical": "https://demo.openimis.org/fhir-ig/",
+  "introduction": "**Documentation for the openIMIS software** Implementation Guide",
+  "category": "Research",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build",
+      "path": "https://demo.openimis.org/fhir-ig/",
+      "status": "ci-build",
+      "current": true
+    }
+  ]
+}
